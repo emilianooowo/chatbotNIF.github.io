@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chatbot NIF - Emiliano Leal Gerardo</title>
+
+  <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #3a3a3a, #959595);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .chat-wrapper {
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 500px;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    header {
+      background-color: #1a1c1e;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    #webchat {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+    }
+
+    footer {
+      background-color: #f3f3f3;
+      color: #333;
+      padding: 12px;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: #1f2123;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .chat-wrapper {
+        height: 90vh;
+      }
+
+      header {
+        font-size: 1rem;
+      }
+
+      footer {
+        font-size: 0.75rem;
+      }
+    }
+
+    #webchat .bpWebchat {
+      position: unset !important;
+      width: 100% !important;
+      height: 100% !important;
+      max-height: 100% !important;
+      max-width: 100% !important;
+    }
+
+    #webchat .bpFab {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="chat-wrapper">
+    <header>Chatbot NIF - Emiliano Leal Gerardo</header>
+
+    <div id="webchat"></div>
+
+    <footer>
+      Desarrollado por Emiliano Leal Gerardo ·
+      <a href="https://github.com/EmilianoLeal" target="_blank">Ver en GitHub</a>
+    </footer>
+  </div>
+
+  <script>
+    window.botpress.on("webchat:ready", () => {
+      window.botpress.open();
+    });
+
+    window.botpress.init({
+      "botId": "e4bbce87-5bd3-4fc3-b2e8-48b66430263a",
+      "configuration": {
+        "website": {},
+        "email": {},
+        "phone": {},
+        "termsOfService": {},
+        "privacyPolicy": {},
+        "color": "#1c1c1e",
+        "variant": "solid",
+        "themeMode": "light",
+        "fontFamily": "inter",
+        "radius": 1
+      },
+      "clientId": "a74e6250-f9c1-40bc-8512-f271d2ec56fa",
+      "selector": "#webchat"
+    });
+  </script>
+
+</body>
+</html>
